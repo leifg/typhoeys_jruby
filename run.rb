@@ -29,5 +29,5 @@ iterations = ENV['ITERATIONS'] || 40
 size = ENV['SIZE'] || 200
 
 iterations.to_i.times do |n|
-  HttpFetcher.new((1..size.to_i).map{|suffix| suffix * (n+1)}).run
+  HttpFetcher.new(Array.new(size.to_i){ SecureRandom.hex }).run
 end
