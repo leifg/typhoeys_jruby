@@ -19,7 +19,7 @@ class HttpFetcher
   def build_request suffix
     Typhoeus::Request.new("http://google.com/?#{suffix}").tap{|r|
       r.on_complete{|response|
-        puts "#{response.request.url} returned with #{response.code}\n"
+        $stdout.puts "#{response.request.url} returned with #{response.code}\n"
       }
     }
   end
