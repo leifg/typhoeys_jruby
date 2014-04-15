@@ -25,7 +25,7 @@ class HttpFetcher
   end
 end
 
-iterations = ENV['ITERATIONS'] || 40
+iterations = ENV['ITERATIONS'] || 50
 size = ENV['SIZE'] || 200
 
 iterations.to_i.times do |n|
