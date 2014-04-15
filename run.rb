@@ -28,6 +28,6 @@ end
 iterations = ENV['ITERATIONS'] || 40
 size = ENV['SIZE'] || 200
 
-iterations.times do |n|
-  HttpFetcher.new((1..size).map{|suffix| suffix * (n+1)}).run
+iterations.to_i.times do |n|
+  HttpFetcher.new((1..size.to_i).map{|suffix| suffix * (n+1)}).run
 end
